@@ -1,0 +1,25 @@
+{
+  "name": "vegetable-drama",
+  "version": "1.0.0",
+  "description": "Template for testing with Cucumber and Playwright framework integration",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Wepstern/vegetable-drama.git"
+  },
+  "author": "Gergő Balogh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Wepstern/vegetable-drama/issues"
+  },
+  "homepage": "https://github.com/Wepstern/vegetable-drama#readme",
+  "devDependencies": {
+    "@cucumber/cucumber": "^8.0.0-rc.2",
+    "@playwright/test": "^1.18.0",
+    "expect": "^27.2.5",
+    "fs-extra": "^10.0.0"
+  }
+}
