@@ -4,7 +4,9 @@
   "description": "Template for testing with Cucumber and Playwright framework integration",
   "main": "index.js",
   "scripts": {
-    "test": "cucumber-js"
+    "test": "cucumber-js",
+    "report": "open reports/report.html",
+    "cucumber-html-report": "node utils/cucumber-html-reporter/index.js"
   },
   "repository": {
     "type": "git",
@@ -19,7 +21,8 @@
   "devDependencies": {
     "@cucumber/cucumber": "^8.0.0-rc.2",
     "@playwright/test": "^1.18.0",
-    "expect": "^27.2.5",
+    "assert": "^2.0.0",
+    "cucumber-html-reporter": "^5.5.0",
     "fs-extra": "^10.0.0"
   }
 }

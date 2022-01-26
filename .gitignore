@@ -1,6 +1,10 @@
 # macOS
 .DS_Store
 
+#reports
+reports/*.html
+reports/*.json
+
 # Logs
 logs
 *.log
