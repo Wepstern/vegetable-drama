@@ -1,9 +1,14 @@
 # macOS
 .DS_Store
 
-#reports
+# Playwright reports
 reports/*.html
 reports/*.json
+
+# Playwright WebM videos
+screenshots/*.webm
+
+# Playwright 
 
 # Logs
 logs

@@ -5,8 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "cucumber-js",
+    "test:parallel": "cucumber-js --parallel=1",
     "report": "open reports/report.html",
-    "cucumber-html-report": "node utils/cucumber-html-reporter/index.js"
+    "check": "npm test && npm run report",
+    "check-prettier": "npm test && npm run cucumber-html-report",
+    "cucumber-html-report": "node utils/cucumber-html-reporter/index.js",
+    "debug": "PWDEBUG=1 DEBUG=pw:api cucumber-js",
+    "video": "PWVIDEO=1 cucumber-js"
   },
   "repository": {
     "type": "git",
