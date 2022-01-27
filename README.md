@@ -148,7 +148,7 @@ to extend Word context with a CustomWord, that contains the Browser --> Ebben az
 
  ---> before all
  - start browser
- - create traces fodler
+ - create traces folder
 
  --> before each
     - open page
