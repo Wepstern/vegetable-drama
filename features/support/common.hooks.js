@@ -10,7 +10,7 @@ setDefaultTimeout(process.env.PWDEBUG ? -1 : 60 * 1000);
 BeforeAll(async function() {
     // Start browser + Configure Browser
     switch (process.env.BROWSER) {
-        // TODO Google ncr always redirect to hungarian settings - geolocaton,  settings uneffective - 
+        // TODO Google ncr always redirect to hungarian settings - geolocaton setting was uneffective
         case 'firefox':
             browser = await firefox.launch(config.firefoxLaunchOptions);
             break;

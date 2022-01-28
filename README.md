@@ -121,13 +121,13 @@ reporter.generate(options);
 ```
 ## Implement Cucumber and Playwright integration
 We have start/close the browser with the help of BeforeAll, AfterAll hook, so its context will be shared across all of the scenarios.
-Scenarios will inherit BrowserContext and that gives the opportunity to start/close every scenario its encapsulated PageContext.
-The PageContext creation will be placed in Before, All hooks. 
-We will extend the Cucumber World with a CustomWord, that give a constructor for these contexts.
+Scenarios have their encapsulated PageContext and BrowserContext.
+The PageContext creation will be placed in Before, After hooks.
+TODO: We will extend the Cucumber World with a CustomWord, that give a constructor for these contexts.
 
 to extend Word context with a CustomWord, that contains the Browser --> Ebben azert nem vagyok biztos!
 
-```js
+```txt
  -------------------
 |                   |
 |   BrowserContext  | ---> CustomWord ---> Word ---> BeforeAll, After All hook
@@ -141,25 +141,22 @@ to extend Word context with a CustomWord, that contains the Browser --> Ebben az
  -------------------
 ```
 
- First things first implement the browser context creation
+ ---> before all (global hook - before any scenarios is run)
+    - start browser
+    - create traces folder
 
- import browsers from pw
- import fs-extra --> it needed to traces dir creation
-
- ---> before all
- - start browser
- - create traces folder
-
- --> before each
-    - open page
+ --> before (scenario - before each scenarios is run))
+    - set up new browser context
+    - set up new page context
 
  --> run scenario 
 
- --> after each
-    - close page
+ --> after (scenario - after each scenario have been run)
+    - tear down page context
+    - tear down browser context
 
- --> after all
-    - close browser
+ --> after all (global hook - after all scenario have been run)
+    - stop browser
 
 
 JS
