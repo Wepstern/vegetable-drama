@@ -1,7 +1,6 @@
 # vegetable-drama
 Testing with Cucumber and Playwirght framework integration
 
-
 ## Steps of template creation
 First of all, set up a new npm package then install the necessary packages
 ```bash
